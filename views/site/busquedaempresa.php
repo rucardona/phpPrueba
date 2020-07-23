@@ -18,6 +18,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
         <div class="alert alert-success">
             Has enviado correctamente el nit
+           
         </div>
 
         <p>

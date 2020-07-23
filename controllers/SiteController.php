@@ -138,11 +138,12 @@ class SiteController extends Controller
             $client = new Client();
             $response = $client->createRequest()
             ->setMethod('POST')
-            ->setUrl('https://jsonplaceholder.typicode.com/todos/1')
-           // ->setData(['name' => 'John Doe', 'email' => 'johndoe@domain.com'])
+            ->setUrl('https://jsonplaceholder.typicode.com/todos/1')           
            
             ->send();
-            echo var_dump($response);
+           
+
+            echo $response;
 
             if   ($model->Nit=='aaa'){
 

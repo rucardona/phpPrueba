@@ -9,6 +9,8 @@ use yii\base\Model;
 class EmpresaForm extends Model
 {
     public $Nit;
+    public $title;
+
     
 
     /**
