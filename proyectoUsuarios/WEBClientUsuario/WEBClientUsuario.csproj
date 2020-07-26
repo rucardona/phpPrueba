@@ -175,9 +175,9 @@
       <LastGenOutput>DataClassesMariaDB.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="DataClassesMariaDB.dbml.layout">
+    <None Include="DataClassesMariaDB.dbml.layout">
       <DependentUpon>DataClassesMariaDB.dbml</DependentUpon>
-    </Content>
+    </None>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
