@@ -56,6 +56,12 @@ return [
     'charset' => 'utf8',
 ];
 ```
+
+
+#### Script
+
+En la carpeta ScriptsDB se encuentran los script sql para la creacion de las bases de datos y tablas de cada proyecto
+
 ### Configuración Conexión Cliente SOAP
 Editar el archivo `config/web.php` y cambiar el endpoint del `WSDL`
 
@@ -78,15 +84,21 @@ Editar el archivo `config/web.php` y cambiar el endpoint del `WSDL`
         ],
 ~~~
 
+
+
+
 **NOTA:**
 
 - el proyecto se movio a una carpeta denominada proyectoEmpresas por lo que la ruta de acceso al mismo cambió a :
+
 ~~~
-	http://localhost/basic/proyectoEmpresas/web/index.php
+	http://localhost/phpPrueba/proyectoEmpresas/web/index.php
 ~~~
 
-
-
+- una vez descargado el proyecto de Git, se debe realizar la instalacion de dependencias de Yii2 para lo cual se debe ejecutar en el proyecto proyectoEmpresas el comando 
+~~~
+	composer install 
+~~~
 ## Proyecto Usuarios
 
 Proyecto desarrollado en .Net framework 4.7.2
