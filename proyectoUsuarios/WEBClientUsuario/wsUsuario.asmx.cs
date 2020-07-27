@@ -23,10 +23,10 @@ namespace WEBClientUsuario
         DBService db = new DBService();
 
         [WebMethod]
-        public Boolean insert(UsuarioDTO usuario)
+        public long insert(UsuarioDTO usuario)
         {
-            Boolean exito = db.insert(usuario);
-            return exito;
+            var id = db.insert(usuario);
+            return id;
 
         }
 
@@ -48,17 +48,17 @@ namespace WEBClientUsuario
 
 
         [WebMethod]
-        public string getUsuarioById(int id)
+        public UsuarioDTO getUsuarioById(int id)
         {
-            var usuarios = db.readById(id);
-            return JsonConvert.SerializeObject(usuarios);
+            var usuario = db.readById(id);
+            return usuario;
 
         }
         [WebMethod]
-        public string getUsuarios()
+        public List<UsuarioDTO> getUsuarios()
         {
             var usuarios = db.read();
-            return JsonConvert.SerializeObject(usuarios);
+            return usuarios;
 
         }
     }

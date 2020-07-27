@@ -51,6 +51,22 @@ $config = [
             ],
         ],
         */
+        'WSUsuarios' => [
+            'class' => 'mongosoft\soapclient\Client',
+            'url' => 'https://localhost:44301/wsUsuario.asmx?WSDL',
+            'options' => [
+                'cache_wsdl' => 0,
+                'trace' => 1,
+                'stream_context' => stream_context_create(array(
+                      'ssl' => array(
+                           'verify_peer' => false,
+                            'verify_peer_name' => false,
+                            'allow_self_signed' => true
+                      )
+                      )
+                )
+            ],
+        ],
     ],
     'params' => $params,
 ];

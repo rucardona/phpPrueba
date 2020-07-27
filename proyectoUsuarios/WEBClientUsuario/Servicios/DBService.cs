@@ -11,7 +11,7 @@ namespace WEBClientUsuario.Servicios
     {
         private string connectionString = "Server=localhost;User ID=root;Password=root308/*;Database=db_usuario";
 
-        internal object readById(int id)
+        internal UsuarioDTO readById(int id)
         {
             UsuarioDTO usuarios = new UsuarioDTO();
             using (var connection = new MySqlConnection(connectionString))
@@ -85,7 +85,7 @@ namespace WEBClientUsuario.Servicios
             }
         }
 
-        internal Boolean insert(UsuarioDTO usuario)
+        internal long insert(UsuarioDTO usuario)
         {
             string sql = $"INSERT INTO usuario ( Nombres, Apellidos, NroIdentificacion, empresaId) VALUES( '{usuario.Nombres}', '{usuario.Apellidos}', '{usuario.Identificacion}', {usuario.EmpresaId})";
 
@@ -102,7 +102,7 @@ namespace WEBClientUsuario.Servicios
                     {
 
                         command.ExecuteNonQuery();
-                        return true;
+                        return command.LastInsertedId;
                     }
 
 
@@ -111,7 +111,7 @@ namespace WEBClientUsuario.Servicios
             catch (Exception)
             {
 
-                return false;
+                return 0;
             }
         }
 
